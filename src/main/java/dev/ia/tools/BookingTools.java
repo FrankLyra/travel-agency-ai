@@ -34,6 +34,7 @@ public class BookingTools {
                 .orElse("Reserva com ID " + bookingId + " não encontrada.");
     }
 
+    @Tool("Lista os pacotes de viagem, disponíveis para uma determinada categoria (ex: ADVENTURE, RESORTS).")
     public String listPackagesByCategory(Category category) {
         List<Booking> packages = bookingService.findPackagesByCategory(category);
         if (packages.isEmpty()) {
